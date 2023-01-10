@@ -7,11 +7,11 @@ export default class Team {
     if (character in this.members) {
       new Error('Такой персонаж уже есть');
     }
-    return this.members.add(character);
+    this.members.add(character);
   }
 
   addAll(...characters) {
-    return characters.forEach((character) => this.members.add(character));
+    characters.forEach((character) => this.members.add(character));
   }
 
   toArray() {
